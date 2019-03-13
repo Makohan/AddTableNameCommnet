@@ -1,6 +1,6 @@
 require_relative './table.rb'
 
-output_file_path = ARGV[0] || '.temp'
+output_file_path = ARGV[0] + '.temp'
 
 # ファイルパスを引数で受け取る
 all_text = ''
@@ -19,7 +19,6 @@ tables.each do |t|
 end
 
 # 出力
-puts output_file_path
-File.open('test.txt', 'w') do |file|
+File.open(output_file_path, 'w') do |file|
   file.puts all_text
 end
